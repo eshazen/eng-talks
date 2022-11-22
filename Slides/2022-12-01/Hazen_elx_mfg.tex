@@ -1,0 +1,148 @@
+%
+% Electronics Manufacturing
+%
+
+\pdfminorversion=4   % fix Acrobat error
+% \documentclass[12pt,aspectratio=169]{beamer}
+\documentclass[12pt]{beamer}
+% \documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{tikz}    % for logo onlyh
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{makecell}
+\usepackage{array}
+
+\definecolor{my-red}{RGB}{128,0,0}
+\definecolor{my-green}{RGB}{0,96,0}
+\definecolor{my-blue}{RGB}{0,0,128}
+\definecolor{my-orange}{RGB}{160,83,0}
+\definecolor{my-violet}{RGB}{142,0,209}
+\definecolor{my-aqua}{RGB}{0,96,96}
+\definecolor{my-olive}{RGB}{89,124,0}
+
+\newcommand{\tred}[1]{\textcolor{my-red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{my-green}{#1}}
+\newcommand{\tblue}[1]{\textcolor{my-blue}{#1}}
+\newcommand{\torange}[1]{\textcolor{my-orange}{#1}}
+\newcommand{\tviolet}[1]{\textcolor{my-violet}{#1}}
+\newcommand{\taqua}[1]{\textcolor{my-aqua}{#1}}
+\newcommand{\tolive}[1]{\textcolor{my-olive}{#1}}
+
+\renewcommand{\indent}{\hspace*{2em}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+ 
+\urlstyle{same}
+
+\begin{document}
+
+\date{}
+
+% Add footer text
+\addtobeamertemplate{footline}{
+  \parbox{\linewidth}{\vspace*{-8pt}
+    ~~~ Slide \insertframenumber/\inserttotalframenumber
+    ~~~ 2022-12-01 ~~~
+    E.~Hazen }
+}
+
+% Move footnotes above footline
+\addtobeamertemplate{footnote}{}{\vspace{0.1in}}
+
+% add BU + ATLAS logo
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east)
+{\includegraphics[height=0.8cm]{figs/bu.png}};
+\end{tikzpicture}}
+
+
+\title{Introduction to Electronics Manufacturing}
+
+\newcommand{\spage}[1]{
+\begin{frame}
+  \begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north]at(current page.north){
+     \includegraphics[width=0.95\paperwidth]{#1}
+  };
+  \end{tikzpicture}
+\end{frame}
+}
+ 
+ %---------- Title 
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Introduction to Electronics Manufacturing}
+\framesubtitle{A brief introduction}
+
+  \begin{itemize}
+  \item Introduction
+  \item Component types
+  \item Circuit Design Process
+  \item Manufacturing Processes
+  \item Considerations for Integration
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Component Types}
+% \framesubtitle{}
+
+  \begin{itemize}
+  \item Chips (integrated circuits)
+  \item Passives (Resistors, Capacitors, Inductors)
+  \item Discretes (Transistors, Diodes, other)
+  \item Sensors
+  \item Connectors
+  \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Circuit Design Process}
+
+  \begin{itemize}
+  \item Analog vs Digital
+  \item Design Steps
+    \begin{itemize}
+    \item Brainstorming and sketching
+    \item Analysis
+    \item Simulation
+    \item Prototyping
+    \item Testing
+    \item Optimize and repeat!
+    \end{itemize}
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Design Tools}
+
+  \begin{itemize}
+  \item Schematic Capture
+  \item Simulation (analog and digital)
+  \item Physical Layout
+
+
+  \end{itemize}
+  
+
+\end{frame}
+
+
+\end{document}
+
